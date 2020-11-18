@@ -1,0 +1,61 @@
+## version $VER: Mousemeter_sbar.catalog 1.0 (24.10.2012)
+## codeset 0
+## language english
+## chunk AUTH Firstname Name
+;
+MSG_APPLICATION_NAME
+
+; Mousemeter
+;
+MSG_GUI_LABEL_VERTICAL
+
+; Vertical:
+;
+MSG_GUI_LABEL_HORIZONTAL
+
+; Horizontal:
+;
+MSG_GUI_LABEL_TOTAL
+
+; Total:
+;
+MSG_GUI_LABEL_AVERAGESPEED
+
+; Average Speed:
+;
+MSG_GUI_SHORTHELP_BUTTONRESET
+
+; Resets the statistics data.
+;
+MSG_SETTINGS_LABEL_MONITORSIZE
+
+; Monitor Size:
+;
+MSG_SETTINGS_LABEL_UNIT
+
+; Unit:
+;
+MSG_SETTIGS_SLIDER_INCH
+
+; %ld inch
+;
+MSG_SETTINGS_LABEL_SHOWONSTARTUP
+
+; Show window on start
+;
+MSG_GUI_LABEL_MOUSECLICKS
+
+; Mouse Clicks:
+;
+MSG_SETTINGS_LABEL_SHOWCLICKS
+
+; Show mouse clicks
+;
+MSG_GUI_LABEL_WHEELMOUSE
+
+; Wheel Moves:
+;
+MSG_SETTINGS_LABEL_SHOWWHEEL
+
+; Show mouse mouse wheel moves
+;

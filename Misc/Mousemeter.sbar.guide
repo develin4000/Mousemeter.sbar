@@ -1,0 +1,302 @@
+@DATABASE "Mousemeter.sbar.guide"
+@(c) "2013-2020 Stefan Blixth, OnyxSoft"
+@$VER: "Mousemeter.sbar 1.2 (18-11-20) by Stefan Blixth, OnyxSoft"
+@INDEX "Index"
+@NODE "Main" "Mousemeter.sbar - Documentation"
+@NEXT "intro"
+
+ @{b}Mousemeter.sbar 1.2@{ub} - Copyright © 2013-2020 Stefan Blixth, OnyxSoft
+
+ - User Documentation -
+
+ @{" Introduction " LINK "intro"   } - What is Mousemeter.sbar ?
+ @{" Requirements " LINK "req"     } - What does it need to run ?
+ @{" Installation " LINK "install" } - How to install it.
+ @{" Usage        " LINK "usage"   } - How to use Mousemeter.sbar.
+
+ @{" FAQ          " LINK "faq"     } - Frequently Asked Questions.
+
+ @{" What's new ? " LINK "news"    } - What is new in this version?
+ @{" History      " LINK "history" } - The history of this program.
+ @{" Future       " LINK "future"  } - What can we see in the crystal-ball?
+ @{" Copyrights   " LINK "copy"    } - Legal mumbo-jumbo..
+
+ @{" Author       " LINK "author"  } - Person behind this program.
+ @{" Thanks to..  " LINK "thanks"  } - My best regards to..
+
+ @{" Donations    " LINK "donate"  } - Show your support for OnyxSoft
+
+@ENDNODE
+
+@NODE "intro" "Mousemeter.sbar - Introduction"
+@PREV "main"
+@NEXT "req"
+
+ @{b}@{u}Introduction@{uu}@{ub}
+
+ Mousemeter.sbar is a screenbar module for MorphOS which keep track on your mouse movements.
+ It presents vertical, horizontal and total lenght you've moved your mouse.
+ You will also be able to see the avarage speed on your movements aswell. 
+ If that was not enough it also keeps track of you mouse clicks and wheel movements =)
+
+@ENDNODE
+
+@NODE "req" "Mousemeter.sbar - Requirements"
+@PREV "intro"
+@NEXT "install"
+
+ @{b}@{u}Requirements@{uu}@{ub}
+
+ This program needs at least following stuff:
+
+ · MorphOS 2.x
+
+@ENDNODE
+
+@NODE "install" "Mousemeter.sbar - Installation"
+@PREV "req"
+@NEXT "usage"
+
+ @{b}@{u}Installation@{uu}@{ub}
+
+ The easy way :
+ 
+ · Run the Installer, and you should be ready in some seconds =)
+  
+ The "Hard" way :
+ 
+ · Copy the module Mousemeter.sbar into your SYS:Classes/Screenbar/ - drawer.
+ · Optional - Copy the catalog file to your system.
+ · Re-load the screenbar modules from the screenbar-menu.
+ · Activate "Mousemeter" in the same menu.
+ 
+ Do not forget :
+ 
+ · Change the settings in the screenbar settings menu to suite your monitor size.
+
+@ENDNODE
+
+@NODE "usage" "Mousemeter.sbar - Usage"
+@PREV "install"
+@NEXT "faq"
+
+ @{b}@{u}Usage@{uu}@{ub}
+
+ By pressing the Mousemeter symbol on the screenbar you'll see a MUI-Window containing realtime statistics
+ on your mouse movements.
+
+ You can adjust the monitor size (which is needed for correct presentation), and units for lenght and speed presentations
+ by selecting settings from the screenbar-menu.
+ From here you locate the "Mousemeter" module which will let you alter the desired options.
+
+@ENDNODE
+
+@NODE "faq" "Mousemeter.sbar - FAQ"
+@PREV "usageprefs"
+@NEXT "news"
+
+@{b}@{u}FAQ - Frequently Asked Question@{uu}@{ub}
+
+* @{b}Q = Question@{ub}
+* @{b}A = Answer@{ub}
+
+------------------------------------------------------------------------------
+Q - I thing the presented statistics is wrong ?
+
+A - Double check that you have specified the correct monitor size (inch)
+    since it is needed for correct calculations.
+
+==============================================================================
+
+Q - Is there a whay to reset the shown statistics ?
+
+A - Clicking on the graphics inside the MUI-Window will reset the data.
+
+==============================================================================
+
+Q - Can we please have a OS3/OS4/AROS-version ?
+
+A - This module is specifically using a lot of MorphOS-only features so
+    unless someone comes up with it in other OS or that I'm having a boring
+    day and implements some minimum similar solutions there won't be any
+    releases.  
+
+------------------------------------------------------------------------------ 
+
+
+@ENDNODE
+
+@NODE "news" "Mousemeter.sbar - What's new?"
+@PREV "usage"
+@NEXT "history"
+
+ @{b}@{u}What's new@{uu}@{ub}
+
+ · Built with newer GCC (9.x) and now following the noixemul guidelines =)
+ · Cleaned up the code (needs more)
+ · Source code included
+
+@ENDNODE
+
+@NODE "history" "Mousemeter.sbar - History"
+@PREV "news"
+@NEXT "future"
+
+ @{b}@{u}History@{uu}@{ub}
+
+
+  · 18-Nov-2020 - Third release (v1.2)
+
+   - Built with newer GCC (9.x) and now following the noixemul guidelines =)
+   - Cleaned up the code (needs more)
+   - Source code included
+
+
+  · 18-Sep-2013 - Second release (v1.1)
+
+   - Fixed that mouse clicks and wheel movements isn't counted doubled or more if you use multiple screens.
+   - Fixed on-the-fly calculations when changing units in the preferences.
+   - Only automatically opens on the current active screen (if the preferences is set) and not all other screens.
+
+
+ · 16-Sep-2013 - First release (v1.0)
+
+   - First Release!
+
+@ENDNODE
+
+@NODE "future" "Mousemeter.sbar - Future"
+@PREV "history"
+@NEXT "copy"
+
+ @{b}@{u}Future@{uu}@{ub}
+
+ · Real time gauge in the screen bar object ? 
+ · < Suggestion are welcome =) >
+
+@ENDNODE
+
+@NODE "copy" "Mousemeter.sbar - Copyright & Disclaimer"
+@PREV "future"
+@NEXT "author"
+
+ @{b}@{u}Copyright and Disclaimer@{uu}@{ub}
+
+ Mousemeter.sbar is totaly free (FreeWare).
+ If you like the program the @{"author" LINK "author"} would be very glad if
+ you could send him a email or a postcard to tell him so... ;-)
+ @{"Donations" LINK "donate"} are also welcome ofcourse ;)
+
+ Permission is granted to make and distribute verbatim copies of this 
+ program provided the copyright notice and this permission notice are 
+ preserved on all copies.
+
+ No guarantee of any kind is given that the programs described in this 
+ document are 100% reliable. You are using this material at your own risk. 
+ The author cannot be made responsible for any damage which is caused by 
+ using this program.
+
+ This package is freely distributable, but the copyrights still apply. 
+ This means that you can copy it freely as long as you don't ask for a more 
+ than nominal copying fee.
+
+ Permission is granted to include this package in Public-Domain collections,
+ Aminet (CD's) etc. etc. The package may be uploaded to Bulletin-
+ Board-Systems or FTP servers.
+ 
+@ENDNODE
+
+@NODE "author" "Mousemeter.sbar - About the author"
+@PREV "copy"
+@NEXT "thanks"
+
+ @{b}@{u}About the author@{uu}@{ub}
+
+ My name is Stefan Blixth, an programmer/electrical engineer from Karlstad, Sweden.
+
+ If you would like to contact me about this program (or any other program I've done),
+ the best way is todo it by email.
+ So if you have any comments, found bugs or have complains, don't hesitate to
+ use one of following addresses :
+
+ Personal email : @{b}stefan@onyxsoft.se@{ub}
+ Reporting bugs : @{b}bugs@onyxsoft.se@{ub}
+
+
+ If you would like to send me a postcard, my address is :
+
+ @{b}Stefan Blixth
+ Spånga 433
+ 655 94 Karlstad
+ Sweden@{ub}
+
+ If you are interested in more programs by me and/or the rest of the team.
+ You can find the complete OnyxSoft software library at the following URL :
+
+ @{b}www.onyxsoft.se@{ub}
+
+@ENDNODE
+
+@NODE "thanks" "Mousemeter.sbar - Thanks to.."
+@PREV "author"
+@NEXT "donate"
+
+ @{b}@{u}Thanks to@{uu}@{ub}
+
+ I would like to thank following people/groups for making it possible for me to create this program.
+
+
+ Stefan Stuntz........................ For the superb Magic User Interface (MUI).
+
+ MorphOS Team......................... For creating the best system there is, I love it!
+
+ Christian 'tokai' Rosentreter........ For great tips and help on MUI-magic and MOS 2.x features =)
+                                       ...And for letting me use his installer script!
+
+ Antoine 'Czeko' Dubourg.............. For having answers for my stupid questions =)
+ 
+ Guido 'Geit' Mersmann................ For pointing out the inputhandler problem ;)
+ 
+@ENDNODE
+
+@NODE "donate" "Mousemeter.sbar - Donations"
+@PREV "thanks"
+
+ @{b}@{u}Donations are welcome@{uu}@{ub}
+
+ We in OnyxSoft have been releasing freeware applications for over 17 years and still going strong
+ with the fullest ambition for the Amiga platform.
+
+ This is ofcourse something we would like to continue todo in the future.
+ All our titles are totaly free of charge without any crippled functions etc.
+
+ We have now established a paypal-account after many users have asked us how to donate
+ money to us (for motivating us even further and keeping the software releases "flowing").
+
+ To send us donations, please use following email : @{b}donate@onyxsoft.se@{ub}
+
+
+ Thank you for your support!
+
+
+@ENDNODE
+
+@NODE "Index" "Index of this documentation"
+
+ @{b}@{u}Index (A-Z)@{uu}@{ub}
+
+ @{" Author               " LINK "author"     }
+ @{" Copyright            " LINK "copy"       }
+ @{" Donations            " LINK "donate"     }
+ @{" FAQ                  " LINK "faq"        }
+ @{" Features             " LINK "intro"      }
+ @{" Future               " LINK "future"     }
+ @{" History              " LINK "history"    }
+ @{" Installation         " LINK "install"    }
+ @{" Introduction         " LINK "intro"      }
+ @{" Main-page            " LINK "main"       }
+ @{" Requirements         " LINK "req"        }
+ @{" Thanks to..          " LINK "thanks"     }
+ @{" Usage                " LINK "usage"      }
+ @{" What's new ?         " LINK "news"       }
+@ENDNODE

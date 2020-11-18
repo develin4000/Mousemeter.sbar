@@ -1,0 +1,95 @@
+; 
+; $VER: Install.script 1.6 (05.05.2010) © 2009-2010 Christian Rosentreter
+; Modified for Mousemeter.sbar by Stefan Blixth, OnyxSoft
+; Used under permission from the orginal author.
+;
+
+set mousemeterversion  1
+set mousemeterrevision 2
+
+FailAt 21
+
+;
+;  Make sure Mousemeter.sbar is not active
+;
+Lab tryagain
+
+MOSSYS:C/FlushLib Mousemeter.sbar >NIL:
+If FAIL
+	If `MOSSYS:C/RequestChoice "Mousemeter.sbar Installer" "Mousemeter.sbar is currently active.*n*nPlease disable Mousemeter.sbar in the screen's titlebar menu*nto proceed with the installation." "Proceed|Abort"` EQ 1
+		Skip tryagain BACK
+	EndIf
+	Quit
+EndIf
+
+If EXISTS SYS:Classes/Screenbar/Mousemeter.sbar
+	MOSSYS:C/Version FILE MOSSYS:Classes/Screenbar/Mousemeter.sbar VERSION $mousemeterversion REVISION $mousemeterrevision >NIL:
+	If NOT WARN
+		MOSSYS:C/RequestChoice "Mousemeter.sbar Installer" "The installed Mousemeter.sbar is already up-to-date." "Ok" >NIL:
+		Quit
+	EndIf
+EndIf
+
+;
+;  Handle custom installations.
+;
+If EXISTS MOSSYS:Classes/Screenbar/Mousemeter.sbar
+	MOSSYS:C/Version FILE SYS:Classes/Screenbar/Mousemeter.sbar VERSION $mousemeterversion REVISION $mousemeterrevision >NIL:
+	If NOT WARN
+		MOSSYS:C/RequestChoice "Mousemeter.sbar Installer" "The installed Mousemeter.sbar is already up-to-date." "Ok" >NIL:
+		Quit
+	EndIf
+EndIf
+
+
+
+FailAt 5
+
+;
+;  Remove possible old installation in MOSSYS: and other obsolete files.
+;
+echo "FailAt 10"                                                                                                >T:Mousemeter.sbar_install.log
+
+echo "MOSSYS:C/Delete >NIL: MOSSYS:Classes/Screenbar/Mousemeter.sbar"                                           >>T:Mousemeter.sbar_install.log
+MOSSYS:C/List "MOSSYS:Locale/Catalogs/#?" DIRS LFORMAT "MOSSYS:C/Delete >NIL: *"%f%n/Mousemeter.sbar.catalog*"" >>T:Mousemeter.sbar_install.log
+MOSSYS:C/List "MOSSYS:Locale/Help/#?"     DIRS LFORMAT "MOSSYS:C/Delete >NIL: *"%f%n/Mousemeter.sbar.guide*""   >>T:Mousemeter.sbar_install.log
+
+If EXISTS SYS:Locale/Catalogs
+	MOSSYS:C/List "SYS:Locale/Catalogs/#?" DIRS LFORMAT "MOSSYS:C/Delete >NIL: *"%f%n/Mousemeter.sbar.catalog*"" >>T:Mousemeter.sbar_install.log
+EndIf
+If EXISTS SYS:Locale/Help
+	MOSSYS:C/List "SYS:Locale/Help/#?"     DIRS LFORMAT "MOSSYS:C/Delete >NIL: *"%f%n/Mousemeter.sbar.guide*""   >>T:Mousemeter.sbar_install.log
+EndIf
+echo "MOSSYS:C/Delete >NIL: SYS:Data/Screenbar/Mousemeter ALL QUIET"                                            >>T:Mousemeter.sbar_install.log
+
+;
+;  Install new files
+;
+echo "FailAt 5"                                                                                                 >>T:Mousemeter.sbar_install.log
+echo "MOSSYS:C/MakeDir SYS:Classes/Screenbar     ALL >NIL:"                                                     >>T:Mousemeter.sbar_install.log
+echo "MOSSYS:C/MakeDir SYS:Locale/Catalogs       ALL >NIL:"                                                     >>T:Mousemeter.sbar_install.log
+echo "MOSSYS:C/MakeDir SYS:Locale/Help           ALL >NIL:"                                                     >>T:Mousemeter.sbar_install.log
+echo "MOSSYS:C/Copy Classes/Screenbar/Mousemeter.sbar SYS:Classes/Screenbar/Mousemeter.sbar"                    >>T:Mousemeter.sbar_install.log
+CD Locale
+MOSSYS:C/List #? ALL FILES LFORMAT "MOSSYS:C/Copy *"Locale/%p%n*" TO *"SYS:Locale/%p%n*""                       >>T:Mousemeter.sbar_install.log
+CD /
+
+
+;
+;  Now, mess up user's installation!
+;
+MOSSYS:C/Execute T:Mousemeter.sbar_install.log
+FailAt 21
+
+
+;
+;  Done, hard disk drive completely erased.
+;
+MOSSYS:C/RequestChoice "Mousemeter.sbar Installer" "Installation of Mousemeter.sbar successful completed.*n*nAn installation log file is available in T:" "Ok" >NIL:
+
+
+;
+;  Next time, just do it yourself! :D
+;
+
+; $Id: Install.script 137 2010-06-05 08:40:08Z tokai $

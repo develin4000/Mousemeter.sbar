@@ -1,0 +1,34 @@
+Short:        A mousemeter screenbar module.
+Author:       Stefan Blixth (stefan -at- onyxsoft -dot- se)
+Uploader:     Stefan Blixth <stefan onyxsoft se)
+Type:         util/misc
+Version:      1.2
+Replaces:     util/misc/mousemeter.sbar.lha
+Architecture: ppc-morphos
+
+
+Mousemeter.sbar is a widget screenbar module which let you see the amount of mouse movements
+done on your system. It also show the avarage speed.
+If that was not enough it tracks your mouse clicks and wheel movements aswell =)
+
+
+Mousemeter.sbar
+
+1.2 (18.11.2020) - Third release
+   - Built with newer GCC (9.x) and now following the noixemul guidelines =)
+   - Cleaned up the code (needs more)
+   - Source code included
+
+1.1 (18.09.2013) - Second release
+   - Fixed that mouse clicks and wheel movements isn't counted doubled or more if you use multiple screens.
+   - Fixed on-the-fly calculations when changing units in the preferences.
+   - Only automatically opens on the current active screen (if the preferences is set) and not all other screens.
+
+1.0 (16.09.2013)
+   - First Release (MorphOS 2.x or later).
+
+---
+
+For more quality software for MorphOS and AmigaOS check out :
+
+http://www.onyxsoft.se/

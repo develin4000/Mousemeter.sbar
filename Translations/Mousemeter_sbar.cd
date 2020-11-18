@@ -1,0 +1,42 @@
+MSG_APPLICATION_NAME (0//)
+Mousemeter
+;
+MSG_GUI_LABEL_VERTICAL (1//)
+Vertical:
+;
+MSG_GUI_LABEL_HORIZONTAL (2//)
+Horizontal:
+;
+MSG_GUI_LABEL_TOTAL (3//)
+Total:
+;
+MSG_GUI_LABEL_AVERAGESPEED (4//)
+Average Speed:
+;
+MSG_GUI_SHORTHELP_BUTTONRESET (5//)
+Resets the statistics data.
+;
+MSG_SETTINGS_LABEL_MONITORSIZE (6//)
+Monitor Size:
+;
+MSG_SETTINGS_LABEL_UNIT (7//)
+Unit:
+;
+MSG_SETTIGS_SLIDER_INCH (8//)
+%ld (inch)
+;
+MSG_SETTINGS_LABEL_SHOWONSTARTUP (9//)
+Show window on start
+;
+MSG_GUI_LABEL_MOUSECLICKS (10//)
+Mouse Clicks:
+;
+MSG_SETTINGS_LABEL_SHOWCLICKS (11//)
+Show mouse clicks
+;
+MSG_GUI_LABEL_WHEELMOUSE (12//)
+Wheel Moves:
+;
+MSG_SETTINGS_LABEL_SHOWWHEEL (13//)
+Show mouse mouse wheel moves
+;
