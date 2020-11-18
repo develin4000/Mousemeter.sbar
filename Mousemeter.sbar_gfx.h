@@ -2,10 +2,10 @@
 ->====================================================<-
 ->= Mousemeter.sbar - © Copyright 2013-2020 OnyxSoft =<-
 ->====================================================<-
-->= Version  : 1.2                                   =<-
+->= Version  : 1.3                                   =<-
 ->= File     : Mousemeter.sbar_gfx.h                 =<-
 ->= Author   : Stefan Blixth                         =<-
-->= Compiled : 2020-11-18                            =<-
+->= Compiled : 2020-11-19                            =<-
 ->====================================================<-
 
 - dt2raw image.png image.raw

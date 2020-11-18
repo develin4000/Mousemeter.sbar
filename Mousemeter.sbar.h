@@ -2,10 +2,10 @@
 ->====================================================<-
 ->= Mousemeter.sbar - © Copyright 2013-2020 OnyxSoft =<-
 ->====================================================<-
-->= Version  : 1.2                                   =<-
+->= Version  : 1.3                                   =<-
 ->= File     : Mousemeter.sbar.h                     =<-
 ->= Author   : Stefan Blixth                         =<-
-->= Compiled : 2020-11-18                            =<-
+->= Compiled : 2020-11-19                            =<-
 ->====================================================<-
 
 0xfed4 Stefan 'Develin' Blixth <stefan@onyxsoft.se>
@@ -49,8 +49,8 @@ struct Library *UtilityBase = NULL;
 #define DATE                  __AMIGADATE__
 #define VERSION               1
 #define STRVERSION            "1"
-#define REVISION              2
-#define STRREVISION           "2"
+#define REVISION              3
+#define STRREVISION           "3"
 #define CLASS                 "Mousemeter.sbar"
 #define SUPERCLASS            MUIC_Group
 #define _Dispatcher           Mousemeter_Sbar

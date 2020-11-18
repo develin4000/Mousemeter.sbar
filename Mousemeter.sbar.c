@@ -2,10 +2,10 @@
 ->====================================================<-
 ->= Mousemeter.sbar - © Copyright 2013-2020 OnyxSoft =<-
 ->====================================================<-
-->= Version  : 1.2                                   =<-
+->= Version  : 1.3                                   =<-
 ->= File     : Mousemeter.sbar.c                     =<-
 ->= Author   : Stefan Blixth                         =<-
-->= Compiled : 2020-11-18                            =<-
+->= Compiled : 2020-11-19                            =<-
 ->====================================================<-
 
 0xfed4 Stefan 'Develin' Blixth <stefan@onyxsoft.se>
@@ -68,7 +68,7 @@ struct InputEvent *IEvent(void)
    struct MsgPort *port      = (APTR) REG_A1;
    struct ExecBase *SysBase  = SysBase;
    struct InputEvent *iet    = ie;
-   
+
    (void)port;
    
    if (iet->ie_Class == IECLASS_RAWMOUSE)
@@ -76,18 +76,9 @@ struct InputEvent *IEvent(void)
       switch (iet->ie_Code)
       {
          case IECODE_LBUTTON :
-            mouseclicks++;
-            debug_print("MouseMeter.sbar : %s (%d) - IECODE_LBUTTON\n", __func__, __LINE__);
-            break;
-  
          case IECODE_RBUTTON :
-            mouseclicks++;
-            debug_print("MouseMeter.sbar : %s (%d) - IECODE_RBUTTON\n", __func__, __LINE__);
-            break;
- 
          case IECODE_MBUTTON :
             mouseclicks++;
-            debug_print("MouseMeter.sbar : %s (%d) - IECODE_MBUTTON\n", __func__, __LINE__);
             break;
       }
    }
@@ -97,28 +88,13 @@ struct InputEvent *IEvent(void)
       switch (iet->ie_Code)
       {
          case NM_WHEEL_UP :
-            mousewheel++;
-            debug_print("MouseMeter.sbar : %s (%d) - NM_WHEEL_UP\n", __func__, __LINE__);
-            break;
-
          case NM_WHEEL_DOWN :
-            mousewheel++;
-            debug_print("MouseMeter.sbar : %s (%d) - NM_WHEEL_DOWN\n", __func__, __LINE__);
-            break;
-
          case NM_WHEEL_LEFT :
-            mousewheel++;
-            debug_print("MouseMeter.sbar : %s (%d) - NM_WHEEL_LEFT\n", __func__, __LINE__);
-            break;
-
          case NM_WHEEL_RIGHT :
             mousewheel++;
-            debug_print("MouseMeter.sbar : %s (%d) - NM_WHEEL_RIGHT\n", __func__, __LINE__);
             break;
-
          case NM_BUTTON_FOURTH :
             mouseclicks++;
-            debug_print("MouseMeter.sbar : %s (%d) - NM_BUTTON_FOURTH\n", __func__, __LINE__);
             break;
       }
    }
@@ -167,7 +143,7 @@ BOOL PreClassInitFunc(void)
       IData->sig = Sig; // Kolla denna
       IData->task = FindTask(0);
       SetInt(IData, IntHandler, &IEvent, "MousemeterHandler");
-        
+
       IData->ievent = NULL;
       IntHandler->is_Data = IData;
       IntHandler->is_Node.ln_Name = "MousemeterHandler";
@@ -187,7 +163,7 @@ BOOL PreClassInitFunc(void)
 
       return (TRUE);
    }
-  
+
    return (FALSE);
 }
 
@@ -244,7 +220,7 @@ static ULONG mousemeter_sbar_new(struct IClass *cl, Object *obj, struct opSet *m
    if (!(UtilityBase = (struct Library *)OpenLibrary("utility.library", 39)))
       return(FALSE);
 
-   Locale_Open("Mousemeter_sbar.catalog", 1, 0);
+   Locale_Open("Mousemeter_sbar.catalog", 1, 3);
 
    obj = DoSuperNew(cl, obj,
           InnerSpacing(HORIZ_SPACING, 0),
@@ -260,7 +236,7 @@ static ULONG mousemeter_sbar_new(struct IClass *cl, Object *obj, struct opSet *m
           Child, VSpace(0),
 
           TAG_MORE, msg->ops_AttrList);
-        
+
    if (obj)
    {
       struct Data *data = INST_DATA(cl, obj);
@@ -276,7 +252,7 @@ static ULONG mousemeter_sbar_new(struct IClass *cl, Object *obj, struct opSet *m
       data->cursor       = 0;
       data->mouseclicks  = 0;
       data->mousewheel   = 0;
-   
+
       data->iconid       = 0;
 
       data->cleared      = FALSE;
@@ -288,7 +264,7 @@ static ULONG mousemeter_sbar_new(struct IClass *cl, Object *obj, struct opSet *m
       data->lengthunit   = LUNIT_METER;
       data->sbaricon     = imagebutton;
       data->winopen      = FALSE;
-      
+
       if (FirstInstance)
       {
          data->firstinstance = TRUE;
@@ -472,7 +448,7 @@ static ULONG mousemeter_sbar_cleanup(struct IClass *cl, Object *obj, Msg msg)
       data->win_mmeter = NULL;
 
       data->winopen = FALSE;
- 
+
       if (data->firstinstance)
          FirstWinInst = FALSE;
    }
@@ -504,7 +480,7 @@ static ULONG mousemeter_sbar_handler(struct IClass *cl, Object *obj, struct MUIP
       if (data->win_mmeter) MUI_DisposeObject(data->win_mmeter);
       data->win_mmeter = NULL;
       data->winopen = FALSE;
- 
+
       if (data->firstinstance)
          FirstWinInst = FALSE;
    }
@@ -546,7 +522,7 @@ static ULONG mousemeter_sbar_handler(struct IClass *cl, Object *obj, struct MUIP
             ydiff = data->totaldiffylength;
             tdist = data->totallength;
          }
-         
+
          GlobalXDist = xdist;
          GlobalYDist = ydist;
          GlobalXDiff = xdiff;
@@ -1092,7 +1068,7 @@ static ULONG mousemeter_sbar_updateconfig(struct IClass *cl, Object *obj, struct
       case SBARCFG_MMETER_SHOWSTART:
          data->showonstart = GetConfig(obj, msg->cfgid);
          break;
-      
+
       case SBARCFG_MMETER_SHOWCLICK:
          data->showclicks = GetConfig(obj, msg->cfgid);
          RedrawQ(msg, obj, 1);

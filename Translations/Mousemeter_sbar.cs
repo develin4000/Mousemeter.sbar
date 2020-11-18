@@ -1,4 +1,4 @@
-## Version $VER: Mousemeter_sbar.catalog 1.0 (24.10.2012)
+## Version $VER: Mousemeter_sbar.catalog 1.3 (19.11.2020)
 ## Languages english svenska
 ## Codeset english 0
 ## Codeset svenska 0
@@ -15,7 +15,7 @@ Vertikal:
 ;
 MSG_GUI_LABEL_HORIZONTAL (2//)
 Horizontal:
-Horizontal:
+Horisontell:
 ;
 MSG_GUI_LABEL_TOTAL (3//)
 Total:

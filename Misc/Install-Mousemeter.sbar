@@ -5,7 +5,7 @@
 ;
 
 set mousemeterversion  1
-set mousemeterrevision 2
+set mousemeterrevision 3
 
 FailAt 21
 
