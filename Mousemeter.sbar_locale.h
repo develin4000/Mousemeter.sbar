@@ -74,7 +74,7 @@
 #define MSG_GUI_LABEL_MOUSECLICKS_STR "Mouse Clicks:"
 #define MSG_SETTINGS_LABEL_SHOWCLICKS_STR "Show mouse clicks"
 #define MSG_GUI_LABEL_WHEELMOUSE_STR "Wheel Moves:"
-#define MSG_SETTINGS_LABEL_SHOWWHEEL_STR "Show mouse mouse wheel moves"
+#define MSG_SETTINGS_LABEL_SHOWWHEEL_STR "Show mouse wheel moves"
 
 #endif /* CATCOMP_STRINGS */
 

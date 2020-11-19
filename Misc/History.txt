@@ -2,7 +2,7 @@ Short:        A mousemeter screenbar module.
 Author:       Stefan Blixth (stefan -at- onyxsoft -dot- se)
 Uploader:     Stefan Blixth <stefan onyxsoft se)
 Type:         util/misc
-Version:      1.2
+Version:      1.3
 Replaces:     util/misc/mousemeter.sbar.lha
 Architecture: ppc-morphos
 
@@ -13,6 +13,10 @@ If that was not enough it tracks your mouse clicks and wheel movements aswell =)
 
 
 Mousemeter.sbar
+
+1.3 (19.11.2020) - Fourth release
+   - Added German catalog file thanks to Stefan A. Haubenthal
+   - Minor fixes
 
 1.2 (18.11.2020) - Third release
    - Built with newer GCC (9.x) and now following the noixemul guidelines =)

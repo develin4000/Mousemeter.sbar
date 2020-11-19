@@ -9,7 +9,6 @@
 ->====================================================<-
 */
 
-
 #define CATCOMP_ARRAY
 #define CATCOMP_NUMBERS
 

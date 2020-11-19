@@ -13,7 +13,7 @@ STRIP = ppc-morphos-strip
 SRC_LOCALE = Mousemeter.sbar_locale.c
 OBJ_LOCALE = Mousemeter.sbar_locale.o
 OBJS = Mousemeter.sbar.o
-CFLAGS = -D__AMIGADATE__=\"$(shell date "+%d.%m.%y")\" -noixemul 
+CFLAGS = -D__AMIGADATE__=\"$(shell date "+%d.%m.%y")\" -noixemul -O2
 
 all: Mousemeter.sbar_locale Mousemeter.sbar
 

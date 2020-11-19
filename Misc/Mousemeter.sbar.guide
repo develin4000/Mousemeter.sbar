@@ -1,11 +1,11 @@
 @DATABASE "Mousemeter.sbar.guide"
 @(c) "2013-2020 Stefan Blixth, OnyxSoft"
-@$VER: "Mousemeter.sbar 1.2 (18-11-20) by Stefan Blixth, OnyxSoft"
+@$VER: "Mousemeter.sbar 1.3 (19-11-20) by Stefan Blixth, OnyxSoft"
 @INDEX "Index"
 @NODE "Main" "Mousemeter.sbar - Documentation"
 @NEXT "intro"
 
- @{b}Mousemeter.sbar 1.2@{ub} - Copyright © 2013-2020 Stefan Blixth, OnyxSoft
+ @{b}Mousemeter.sbar 1.3@{ub} - Copyright © 2013-2020 Stefan Blixth, OnyxSoft
 
  - User Documentation -
 
@@ -132,9 +132,8 @@ A - This module is specifically using a lot of MorphOS-only features so
 
  @{b}@{u}What's new@{uu}@{ub}
 
- · Built with newer GCC (9.x) and now following the noixemul guidelines =)
- · Cleaned up the code (needs more)
- · Source code included
+ · Added German catalog file thanks to Stefan A. Haubenthal
+ · Minor fixes
 
 @ENDNODE
 
@@ -144,6 +143,12 @@ A - This module is specifically using a lot of MorphOS-only features so
 
  @{b}@{u}History@{uu}@{ub}
 
+
+  · 19-Nov-2020 - Third release (v1.2)
+
+   - Added German catalog file thanks to Stefan A. Haubenthal
+   - Minor fixes
+   
 
   · 18-Nov-2020 - Third release (v1.2)
 
@@ -256,6 +261,8 @@ A - This module is specifically using a lot of MorphOS-only features so
  Antoine 'Czeko' Dubourg.............. For having answers for my stupid questions =)
  
  Guido 'Geit' Mersmann................ For pointing out the inputhandler problem ;)
+ 
+ Stefan A. Haubenthal................. For the German translation.
  
 @ENDNODE
 
