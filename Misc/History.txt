@@ -16,6 +16,7 @@ Mousemeter.sbar
 
 1.3 (19.11.2020) - Fourth release
    - Added German catalog file thanks to Stefan A. Haubenthal
+   - Added Turkish catalog file thanks to Serkan Dursun
    - Minor fixes
 
 1.2 (18.11.2020) - Third release

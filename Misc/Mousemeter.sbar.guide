@@ -133,6 +133,7 @@ A - This module is specifically using a lot of MorphOS-only features so
  @{b}@{u}What's new@{uu}@{ub}
 
  · Added German catalog file thanks to Stefan A. Haubenthal
+ · Added Turkish catalog file thanks to Serkan Dursun
  · Minor fixes
 
 @ENDNODE
@@ -147,6 +148,7 @@ A - This module is specifically using a lot of MorphOS-only features so
   · 19-Nov-2020 - Third release (v1.2)
 
    - Added German catalog file thanks to Stefan A. Haubenthal
+   - Added Turkish catalog file thanks to Serkan Dursun
    - Minor fixes
    
 
